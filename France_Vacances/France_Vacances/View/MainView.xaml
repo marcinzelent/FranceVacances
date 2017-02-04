@@ -1,0 +1,177 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:France_Vacances.Controls"
+    xmlns:viewModel="using:France_Vacances.ViewModel"
+    x:Class="France_Vacances.View.MainView"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="AnnouncementGridViewStyle" TargetType="GridView">
+            <Setter Property="Padding" Value="0,0,0,10"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="TabNavigation" Value="Once"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
+            <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Enabled"/>
+            <Setter Property="ScrollViewer.IsHorizontalRailEnabled" Value="False"/>
+            <Setter Property="ScrollViewer.VerticalScrollMode" Value="Disabled"/>
+            <Setter Property="ScrollViewer.IsVerticalRailEnabled" Value="True"/>
+            <Setter Property="ScrollViewer.ZoomMode" Value="Disabled"/>
+            <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False"/>
+            <Setter Property="ScrollViewer.BringIntoViewOnFocusChange" Value="True"/>
+            <Setter Property="IsSwipeEnabled" Value="True"/>
+            <Setter Property="ItemContainerTransitions">
+                <Setter.Value>
+                    <TransitionCollection>
+                        <AddDeleteThemeTransition/>
+                        <ContentThemeTransition/>
+                        <ReorderThemeTransition/>
+                        <EntranceThemeTransition IsStaggeringEnabled="False"/>
+                    </TransitionCollection>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Vertical"/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GridView">
+                        <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}">
+                            <ScrollViewer x:Name="ScrollViewer" 
+                                          AutomationProperties.AccessibilityView="Raw" 
+                                          BringIntoViewOnFocusChange="{TemplateBinding ScrollViewer.BringIntoViewOnFocusChange}" 
+                                          HorizontalScrollMode="{TemplateBinding ScrollViewer.HorizontalScrollMode}" 
+                                          HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" 
+                                          IsHorizontalRailEnabled="{TemplateBinding ScrollViewer.IsHorizontalRailEnabled}" 
+                                          IsHorizontalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsHorizontalScrollChainingEnabled}" 
+                                          IsVerticalScrollChainingEnabled="{TemplateBinding ScrollViewer.IsVerticalScrollChainingEnabled}" 
+                                          IsVerticalRailEnabled="{TemplateBinding ScrollViewer.IsVerticalRailEnabled}" 
+                                          IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}" 
+                                          TabNavigation="{TemplateBinding TabNavigation}" 
+                                          VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" 
+                                          VerticalScrollMode="{TemplateBinding ScrollViewer.VerticalScrollMode}" 
+                                          ZoomMode="{TemplateBinding ScrollViewer.ZoomMode}">
+                                <ItemsPresenter FooterTransitions="{TemplateBinding FooterTransitions}" 
+                                                FooterTemplate="{TemplateBinding FooterTemplate}" 
+                                                Footer="{TemplateBinding Footer}" 
+                                                HeaderTemplate="{TemplateBinding HeaderTemplate}" 
+                                                Header="{TemplateBinding Header}" 
+                                                HeaderTransitions="{TemplateBinding HeaderTransitions}" 
+                                                Padding="{TemplateBinding Padding}"/>
+                            </ScrollViewer>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <!-- Main grid -->
+
+    <Grid Style="{StaticResource GridBackground}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <!-- Search form -->
+
+        <Grid Grid.Column="0"  Margin="10" Padding="20,0" BorderBrush="#CCFFFFFF" BorderThickness="2">
+            <Grid.DataContext>
+                <viewModel:SearchViewModel/>
+            </Grid.DataContext>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+
+            <Grid.Background >
+                <SolidColorBrush Color="DodgerBlue"/>
+            </Grid.Background>
+            
+            <TextBlock Grid.Row="0" 
+                       Text="Your dream holidays are here!" 
+                       FontSize="24" 
+                       TextWrapping="WrapWholeWords" 
+                       VerticalAlignment="Center" 
+                       Foreground="White" 
+                       FontWeight="Bold"/>
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+                <TextBlock Text="Destination" Foreground="White"/>
+                <TextBox x:Name="DestinationTextBox"  PlaceholderText="Where do you want to go?" Text="{Binding SearchedAccommodationModel.Region , Mode=TwoWay}" BorderBrush="#CCFFFFFF" IsSpellCheckEnabled="False"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Orientation="Horizontal">
+                <StackPanel>
+                    <TextBlock Text="Check-in" Foreground="White"/>
+                    <CalendarDatePicker Date="{Binding SearchedStartDate, Mode=TwoWay}" HorizontalAlignment="Stretch" Margin="0,0,10,0" BorderBrush="#CCFFFFFF"/>
+                </StackPanel>
+                <StackPanel>
+                    <TextBlock Text="Check-out" Foreground="White"/>
+                    <CalendarDatePicker Date="{Binding SearchedEndDate, Mode=TwoWay}"  HorizontalAlignment="Stretch" BorderBrush="#CCFFFFFF"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Grid.Row="3" Orientation="Horizontal">
+                <TextBlock Text="Persons" FontSize="20" Width="100" Foreground="White"/>
+                <ComboBox ItemsSource="{Binding Persons}" SelectedItem="{Binding SearchedAccommodationModel.Persons, Mode=TwoWay}" BorderBrush="#CCFFFFFF"/>
+            </StackPanel>
+            <StackPanel Grid.Row="4" Orientation="Horizontal">
+                <TextBlock Text="Rooms" FontSize="20" Width="100" Foreground="White"/>
+                <ComboBox ItemsSource="{Binding Rooms}" SelectedItem="{Binding SearchedAccommodationModel.Rooms, Mode=TwoWay}" BorderBrush="#CCFFFFFF"/>
+            </StackPanel>
+            <Button x:Name="FindAccommodationsButton" Grid.Row="5" Background="Gold" Width="250" Height="50" HorizontalAlignment="Right" Command="{Binding FindAccommodationModelsCommand}" Click="FindAccommodationsButton_OnClick" BorderBrush="#CCFFFFFF">
+                <Button.Content>
+                    <TextBlock Text="Find accomodations" FontSize="20" Foreground="Black" FontWeight="Bold"/>
+                </Button.Content>
+            </Button>
+        </Grid>
+
+
+        <!-- Announcements -->
+
+        <controls:VariableGrid Grid.Column="1" ItemsSource="{Binding AnnouncementModels}" Style="{StaticResource AnnouncementGridViewStyle}" Margin="0,10">
+            <controls:VariableGrid.ItemTemplate>
+                <DataTemplate>
+                    <Grid BorderBrush="Black" BorderThickness="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="15"/>
+                        </Grid.RowDefinitions>
+
+                        <Image Grid.Row="0" Grid.RowSpan="3" Source="{Binding BackgroundPath}" Stretch="UniformToFill" Canvas.ZIndex="-1" />
+                        <TextBlock Grid.Row="1" Margin="10,0" Text="{Binding Content}" Foreground="White" FontSize="24"/>
+                        <TextBlock Grid.Row="2" FontSize="10" Foreground="White" Opacity="0.7" HorizontalAlignment="Right">
+                                <Run Text="Offer expires on "/>
+                                <Run Text="{Binding ExpirationDateTime}"/>
+                        </TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </controls:VariableGrid.ItemTemplate>
+            
+            <controls:VariableGrid.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <VariableSizedWrapGrid ItemHeight="47" ItemWidth="50"/>
+                </ItemsPanelTemplate>
+            </controls:VariableGrid.ItemsPanel>
+            
+            <controls:VariableGrid.DataContext>
+                <viewModel:AnnouncementViewModel/>
+            </controls:VariableGrid.DataContext>
+        </controls:VariableGrid>
+    </Grid>
+</Page>

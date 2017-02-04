@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f455aac0-978c-45c7-9871-33c19d2f04fb}</ProjectGuid>
+    <ArchitectureToolsVersion>2.0.0.0</ArchitectureToolsVersion>
+    <Name>France_Vacances.Inception</Name>
+    <RootNamespace>FV_ClassDiagram</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ItemGroup>
+    <Content Include="DomainModel.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DomainModel.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>DomainModel.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="ClassDiagram.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ClassDiagram.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ClassDiagram.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="MainViewCD.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MainViewCD.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MainViewCD.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SearchViewCD.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SearchViewCD.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SearchViewCD.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrams\AnnouncmentVM.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrams\AnnouncmentVM.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrams\AnnouncmentVM.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrams\SearchViewModel(DownloadData).sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrams\SearchViewModel(DownloadData).sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrams\SearchViewModel(DownloadData).sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SequenceDiagrams\UserViewModel.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SequenceDiagrams\UserViewModel.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SequenceDiagrams\UserViewModel.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLClassDiagram1.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLClassDiagram1.classdiagram</DependentUpon>
+    </Content>
+    <Folder Include="ModelDefinition\" />
+    <Content Include="ModelDefinition\France_Vacances.Inception.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Folder Include="SequenceDiagrams" />
+  </ItemGroup>
+</Project>

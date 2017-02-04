@@ -1,0 +1,218 @@
+[
+  {
+    "Region": "Alps",
+    "Country": "France",
+    "Distance": "1000m",
+    "Type": "Cottage",
+    "AccommodationId": "ID123",
+    "Name": "Haug Chalet",
+    "Stars": "4",
+    "ReviewScore": "9.5",
+    "Images": "Cottage 1",
+    "Facilities": "qqew",
+    "Price": "495 Euro pr. week",
+    "StreetName": "Avenue du Prariond",
+    "City": "Val-d'Isère",
+    "Zipcode": "73150"
+  }
+//	{
+//	"Location": "Alps",
+//	"Country": "France",
+//	"Images": "Cottage 1",
+//	"Name": "Haug Chalet",
+//	"Price": "495 Euro pr. week",
+//	"StreetName": "Avenue du Prariond",
+//	"City": "Val dIsere",
+//	"Zipcode": "73150"
+//	},
+//	{
+//	"Location": "Jura",
+//	"Country": "France",
+//	"Images": "Cottage 1",
+//	"Name": "Chalet Mountains Jura",
+//	"Price": "349 Euro pr. week",
+//	"StreetName": "601 rue de la frontiere",
+//	"City": "Les Rousses",
+//	"Zipcode": "39220"
+//	},
+//	{
+//	"Location": "Vosges",
+//	"Country": "France",
+//	"Images": "Cottage 1",
+//	"Name": "La Fuste des Chamois",
+//	"Price": "695 Euro per week",
+//	"StreetName": "59 H ROUTE DE VOLOGNE",
+//	"City": "La Bresse",
+//	"Zipcode": "88250"
+//	},
+//	{
+//	"Location": "Vosges",
+//	"Country": "France",
+//	"Images": "Cottage 2",
+//	"Name": "Chalet le Kitz",
+//	"Price": "1.495 Euro per week",
+//	"StreetName": "109, chemin des Tourbières",
+//	"City": "Les Rousses",
+//	"Zipcode": "39220"
+//	},
+//	{
+//	"Location": "Pyrenees",
+//	"Country": "France",
+//	"Images":"Cottage 1",
+//	"Name": "La Castella",
+//	"Price": "300 Euro per week",
+//	"StreetName": "4 Route Du Castella ",
+//	"City": "Luzenac",
+//	"Zipcode": "09250"
+//	},
+//	{
+//	"Location": "Martinique",
+//	"Country": "Martinique",
+//	"Images": "Cottage 1",
+//	"Name": "Lucy's Bay",
+//	"Price": "695 Euro per week",
+//	"StreetName": "Pointe de sable blanc ",
+//	"City": "Hyacinthe",
+//	"Zipcode": "97231"
+//	},
+//	{
+//	"Location": "Martinique",
+//	"Country": "Martinique",
+//	"Images": "Cottage 2",
+//	"Name": "Villa Le Paradis",
+//	"Price": "895 Euro per week",
+//	"StreetName": "4 impasse rosalie soleil",
+//	"City": "Sainte-Anne",
+//	"Zipcode": "97227 "
+//	},
+//	{
+//	"Location": "Guadeloupe",
+//	"Country": "Guadeloupe",
+//	"Images": "Cottage 1 ",
+//	"Name": "La Palmeraie Doree",
+//	"Price": "1.095 Euro per week",
+//	"StreetName": "Bien Desire Corot n.n.",
+//	"City": "Saint-Francois",
+//	"Zipcode": "97118"
+//	},
+//	{
+//	"Location": "Guadeloupe",
+//	"Country": "Guadeloupe",
+//	"Images": "Cottage 2",
+//	"Name": "Villa Tainos",
+//	"Price": "2.395 Euro per week",
+//	"StreetName": "Les hauts de Dampierre Impasse Mirando Kancel",
+//	"City": "Le Gosier",
+//	"Zipcode": "97190"
+//	},
+//	{
+//	"Location": "Andorre",
+//	"Country": "Andorre",
+//	"Images": "Cottage 1",
+//	"Name": "Terra Del Cortal",
+//	"Price": "1.795 Euro per week",
+//	"StreetName": "Cami de Palinquero 16",
+//	"City": "Incles",
+//	"Zipcode": "AD100"
+//	},
+//	{
+//	"Location": "Andorra",
+//	"Country": "Andorra",
+//	"Images": "Cottage 2",
+//	"Name": "Borda Canaro",
+//	"Price": "4.800 Euro per week",
+//	"StreetName": "Callissa de l'Asó",
+//	"City": "Incles",
+//	"Zipcode": "AD100"
+//	},
+//	{
+//	"Location": "Reunion",
+//	"Country": "France",
+//	"Images": "Cottage 1",
+//	"Name": "Villa Helena Chalets",
+//	"Price": "495 Euro per week",
+//	"StreetName": "25 rue des Remparts",
+//	"City": "Sainte-Marie",
+//	"Zipcode": "97438"
+//	},
+//	{
+//	"Location": "Reunion",
+//	"Country": "France",
+//	"Images": "Cottage 2",
+//	"Name": "Chalet Des Bois De Lait",
+//	"Price": "445 Euro per week",
+//	"StreetName": "9 Chemin Des Bois De Lait",
+//	"City": "97436",
+//	"Zipcode": "Saint-Leu"
+//	},
+//	{
+//	"Location": "Massif Central",
+//	"Country": "France",
+//	"Images": "Cottage 1",
+//	"Name": "Domaine Laveneau Chalet",
+//	"Price": "500 Euro per week",
+//	"StreetName": "Laveneau",
+//	"City": "La Chabanne",
+//	"Zipcode": "03250"
+//	},
+//	{
+//	"Location": "Mauritius",
+//	"Country": "Mauritius",
+//	"Images": "Cottage 1",
+//	"Name": "Villa Soleil Levant",
+//	"Price": "1.195 Euro per week",
+//	"StreetName": "Trou d'Eau Douce",
+//	"City": "Trou d'Eau Douce",
+//	"Zipcode": "42201"
+//	},
+//	{
+//	"Location": "Mauritius",
+//	"Country": "Mauritius",
+//	"Images": "Cottage 2",
+//	"Name": "Stylia Villas",
+//	"Price": "1795 Euro per week",
+//	"StreetName": "Coastal Road La Pelouse",
+//	"City": "na Trou d'Eau Douce",
+//	"Zipcode": "42201"
+//	},
+//	{
+//	"Location": "Sea Freely",
+//	"Country": "France",
+//	"Images": "Cottage 1",
+//	"Name": "Villa de luxe avec piscine chauffee",
+//	"Price": "2.495 Euro per week",
+//	"StreetName": "68 Avenue Kruger",
+//	"City": "Saint Malo",
+//	"Zipcode": "35400"
+//	},
+//	{
+//	"Location": "Sea Freely",
+//	"Country": "France",
+//	"Images": "Cottage 2",
+//	"Name": "Orchidee",
+//	"Price": "1.195 Euro per week",
+//	"StreetName": "98 Rue Anatole Mopin",
+//	"City": "Cayeu-Sur-Mer",
+//	"Zipcode": "80410"
+//	},
+//	{
+//	"Location": "Italy",
+//	"Country": "Italy",
+//	"Images": "Cottage 1",
+//	"Name": "La Baita",
+//	"Price": "495 Euro per week",
+//	"StreetName": "Piazzetta della Viaccia 5",
+//	"City": "Vaiano",
+//	"Zipcode": "59021"
+//	},
+//	{
+//	"Location": "Italy",
+//	"Country": "Italy",
+//	"Images": "Cottage 2",
+//	"Name": "Cherz Romantic House",
+//	"Price": "1.195 Euro per week",
+//	"StreetName": "Via Cherz 7",
+//	"City": "Livinallongo del Col di Lana",
+//	"Zipcode": "32020"
+//	}
+]

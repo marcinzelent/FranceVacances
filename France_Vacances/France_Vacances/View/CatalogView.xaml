@@ -1,0 +1,124 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewModel="using:France_Vacances.ViewModel"
+    x:Class="France_Vacances.View.CatalogView"
+    mc:Ignorable="d">
+
+    <!-- Main grid -->
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition Width="0.25*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.DataContext>
+            <viewModel:SearchViewModel/>
+        </Grid.DataContext>
+
+        <!-- Mountains category -->
+
+        <Grid Grid.Column="0" Style="{StaticResource CategoryGridStyle}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="160"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource CategoryLabelStyle}" Text="MOUNTAINS"/>
+            <TextBlock Style="{StaticResource CategoryDescriptionStyle}">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "/>
+                <LineBreak/>
+                <Run Text="Sed volutpat tellus mi, imperdiet scelerisque risus consectetur a."/>
+            </TextBlock>
+            <ListView x:Name="MyListView" Grid.Row="2" ItemsSource="{Binding MountainRegions}" SelectedItem="{Binding SearchedAccommodationModel.Region, Mode=TwoWay}" IsItemClickEnabled="True" ItemClick="ListViewBase_OnItemClick">
+                <ListView.ItemContainerStyle>
+                    <StaticResource ResourceKey="LocationStyle"/>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Image Source="/Assets/Images/mountains.jpg" Style="{StaticResource CategoryBackgroundStyle}"/>
+        </Grid>
+
+
+        <!-- Sea category -->
+
+        <Grid Grid.Column="1" Style="{StaticResource CategoryGridStyle}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="160"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource CategoryLabelStyle}" Text="SEA"/>
+            <TextBlock Style="{StaticResource CategoryDescriptionStyle}">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "/>
+                <LineBreak/>
+                <Run Text="Sed volutpat tellus mi, imperdiet scelerisque risus consectetur a."/>
+            </TextBlock>
+            <ListView Grid.Row="2" ItemsSource="{Binding SeaRegions}" SelectedItem="{Binding SearchedAccommodationModel.Region, Mode=TwoWay}" IsItemClickEnabled="True" ItemClick="ListViewBase_OnItemClick">
+                <ListView.ItemContainerStyle>
+                    <StaticResource ResourceKey="LocationStyle"/>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Image Source="/Assets/Images/sea.jpg" Style="{StaticResource CategoryBackgroundStyle}"/>
+        </Grid>
+
+
+        <!-- Countryside category -->
+
+        <Grid Grid.Column="2" Style="{StaticResource CategoryGridStyle}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="160"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource CategoryLabelStyle}" Text="COUNTRYSIDE"/>
+            <TextBlock Style="{StaticResource CategoryDescriptionStyle}">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "/>
+                <LineBreak/>
+                <Run Text="Sed volutpat tellus mi, imperdiet scelerisque risus consectetur a."/>
+            </TextBlock>
+            <ListView Grid.Row="2" ItemsSource="{Binding CountrysideRegions}" SelectedItem="{Binding SearchedAccommodationModel.Region, Mode=TwoWay}" IsItemClickEnabled="True" ItemClick="ListViewBase_OnItemClick">
+                <ListView.ItemContainerStyle>
+                    <StaticResource ResourceKey="LocationStyle"/>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Image Source="/Assets/Images/countryside.jpg" Style="{StaticResource CategoryBackgroundStyle}"/>
+        </Grid>
+
+
+        <!-- Islands category -->
+
+        <Grid Grid.Column="3" Style="{StaticResource CategoryGridStyle}">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="160"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Style="{StaticResource CategoryLabelStyle}" Text="ISLANDS"/>
+            <TextBlock Style="{StaticResource CategoryDescriptionStyle}">
+                <Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. "/>
+                <LineBreak/>
+                <Run Text="Sed volutpat tellus mi, imperdiet scelerisque risus consectetur a."/>
+            </TextBlock>
+            <ListView Grid.Row="2" ItemsSource="{Binding IslandRegions}" SelectedItem="{Binding SearchedAccommodationModel.Region, Mode=TwoWay}" IsItemClickEnabled="True" ItemClick="ListViewBase_OnItemClick">
+                <ListView.ItemContainerStyle>
+                    <StaticResource ResourceKey="LocationStyle"/>
+                </ListView.ItemContainerStyle>
+            </ListView>
+            <Image Source="/Assets/Images/islands.jpg" Style="{StaticResource CategoryBackgroundStyle}"/>
+        </Grid>
+    </Grid>
+</Page>

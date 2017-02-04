@@ -1,0 +1,137 @@
+﻿<Page x:Name="Root"
+      x:Class="France_Vacances.AppShell"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:France_Vacances"
+      xmlns:controls="using:France_Vacances.Controls"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:model="using:France_Vacances.Model"
+      xmlns:viewModel="using:France_Vacances.ViewModel"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+      TabNavigation="Cycle"
+      mc:Ignorable="d">
+
+    <!-- Using a Page as the root for the app provides a design time experience as well as ensures that
+         when it runs on Mobile the app content won't appear under the system's StatusBar which is visible
+         by default with a transparent background.  It will also take into account the presence of software
+         navigation buttons if they appear on a device.  An app can opt-out by switching to UseCoreWindow.
+    -->
+
+    <Page.Resources>
+        <DataTemplate x:Key="NavMenuItemTemplate" x:DataType="local:NavMenuItem" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="48" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Rectangle x:Name="SelectedPipe"
+                           Width="6"
+                           Height="24"
+                           Margin="-2,0,0,0"
+                           Fill="DodgerBlue"
+                           Visibility="{x:Bind SelectedVis, Mode=TwoWay}"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"/>
+                <!-- Showing a ToolTip and the Label is redundant.  We put the ToolTip on the icon.
+                     It appears when the user hovers over the icon, but not the label which provides
+                     value when the SplitView is 'Compact' while reducing the likelihood of showing
+                     redundant information when the label is shown.-->
+                <FontIcon x:Name="Glyph" FontSize="16" Glyph="{x:Bind SymbolAsChar}" VerticalAlignment="Center" HorizontalAlignment="Center" ToolTipService.ToolTip="{x:Bind Label}"/>
+                <TextBlock x:Name="Text" Grid.Column="1" Text="{x:Bind Label}" Style="{StaticResource BodyTextBlockStyle}" TextWrapping="NoWrap" VerticalAlignment="Center"/>
+            </Grid>
+        </DataTemplate>
+        
+    </Page.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="48"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <!-- Declared first for screen reader navigation order, ZIndex specified to have it rendered above everything else. -->
+        <ToggleButton x:Name="TogglePaneButton"
+                      Canvas.ZIndex="100"
+                      TabIndex="1"
+                      Style="{StaticResource SplitViewTogglePaneButtonStyle}"
+                      IsChecked="{Binding IsPaneOpen, ElementName=RootSplitView, Mode=TwoWay}"
+                      ToolTipService.ToolTip="Navigation"/>
+
+        <Grid Grid.Column="1" Grid.Row="0" Background="White">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="0" Source="/Assets/Images/fvacanceslogo.png"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="200,5,0,5" Height="40" />
+            <StackPanel x:Name="StackPanel1" Grid.Column="1" Orientation="Horizontal">
+                <AppBarButton Icon="AddFriend" Label="Sign up" Style="{StaticResource SignButtonStyle}" Width="Auto" Click="GoToCreateUserView"/>
+                <AppBarButton Icon="Contact" Label="Sign in" Style="{StaticResource SignButtonStyle}" Width="Auto" Click="GoToLoginView"/>
+            </StackPanel>
+            <StackPanel x:Name="StackPanel2" Grid.Column="1" Orientation="Horizontal" Visibility="Collapsed">
+                <StackPanel.DataContext>
+                    <viewModel:LoginUserViewModel/>
+                </StackPanel.DataContext>
+                <AppBarButton Icon="Contact" Label="My account" Style="{StaticResource SignButtonStyle}" Width="Auto" Click="GoToUserView"/>
+                <AppBarButton Icon="Sync" Label="Logout" Style="{StaticResource SignButtonStyle}" Width="Auto" Command="{Binding LogOutCommand}"/>
+            </StackPanel>
+        </Grid>
+
+        <!-- Top-level navigation menu + app content -->
+        <SplitView x:Name="RootSplitView"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Grid.Row="1"
+                   DisplayMode="CompactInline"
+                   OpenPaneLength="200"
+                   PaneBackground="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                   IsTabStop="False">
+
+            <SplitView.Pane>
+                <Grid x:Name="PaneContentGrid">
+
+
+                    <!-- A custom ListView to display the items in the pane.  The automation Name is set in the ContainerContentChanging event. -->
+                    <controls:NavMenuListView x:Name="NavMenuList"
+                                              TabIndex="3"
+                                              ItemContainerStyle="{StaticResource NavMenuItemContainerStyle}"
+                                              ItemTemplate="{StaticResource NavMenuItemTemplate}"
+                                              ItemInvoked="NavMenuList_ItemInvoked"/>
+                    <controls:NavMenuListView x:Name="NavMenuList2"
+                                              TabIndex="3"
+                                              Margin="0"
+                                              ItemContainerStyle="{StaticResource NavMenuItemContainerStyle}"
+                                              ItemTemplate="{StaticResource NavMenuItemTemplate}"
+                                              ItemInvoked="NavMenuList_ItemInvoked"
+                                              VerticalAlignment="Bottom"/>
+                    
+                </Grid>
+            </SplitView.Pane>
+
+            <SplitView.Content>
+                <!-- OnNavigatingToPage we synchronize the selected item in the nav menu with the current page.-->
+                <Frame x:Name="Frame" 
+                   Margin="0,0,0,0"
+                   Navigating="OnNavigatingToPage">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition>
+                                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                    <EntranceNavigationTransitionInfo/>
+                                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            </NavigationThemeTransition>
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
+            </SplitView.Content>
+        </SplitView>
+    </Grid>
+</Page>

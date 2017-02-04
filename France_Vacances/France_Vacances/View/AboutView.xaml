@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="France_Vacances.View.AboutView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:France_Vacances.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="LightGray">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+     <TextBlock Text="Group 3D Members" FontSize="40" FontWeight="Bold"> </TextBlock>
+            <TextBlock Text="Donatas Adamonis" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Text="Marcin Zelent" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Text="Simonas Valaitis" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Text="Mikkel Frederiksen" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+            <TextBlock Text="Rasmus Overbye" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+            
+            
+            
+        </StackPanel>
+    </Grid>
+</Page>

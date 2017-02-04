@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{F053A0C8-8897-491D-AE64-267FF09FCEE4}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>France_Vacances</RootNamespace>
+    <AssemblyName>France_Vacances</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>France_Vacances_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>48516728B56BC426C1890B615B60E0D528CEA682</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\Fonts\FontAwesome.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Fonts\BreeSerif.ttf" />
+    <None Include="Assets\SiteContent\test.json" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="France_Vacances_TemporaryKey.pfx" />
+    <None Include="project.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\AccommodationsCollection.cs" />
+    <Compile Include="Model\AccommodationSingleton.cs" />
+    <Compile Include="Model\BookingSingleton.cs" />
+    <Compile Include="Model\FrameActivate.cs" />
+    <Compile Include="Methods\RelayCommand.cs" />
+    <Compile Include="Controls\NavMenuListView.cs" />
+    <Compile Include="AppShell.xaml.cs">
+      <DependentUpon>AppShell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\VariableGrid.cs" />
+    <Compile Include="Methods\OnlineOperations.cs" />
+    <Compile Include="Model\AccommodationModel.cs" />
+    <Compile Include="Model\AnnouncementModel.cs" />
+    <Compile Include="Model\BookingModel.cs" />
+    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Model\UserSingleton.cs" />
+    <Compile Include="NavMenuItem.cs" />
+    <Compile Include="Persistency\Facade.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="ViewModel\AccommodationViewModel.cs" />
+    <Compile Include="ViewModel\BookingViewModel.cs" />
+    <Compile Include="ViewModel\CreateUserViewModel.cs" />
+    <Compile Include="ViewModel\SearchViewModel.cs" />
+    <Compile Include="ViewModel\AnnouncementViewModel.cs" />
+    <Compile Include="ViewModel\LoginUserViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="View\AboutView.xaml.cs">
+      <DependentUpon>AboutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\AccommodationView.xaml.cs">
+      <DependentUpon>AccommodationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BookingView.xaml.cs">
+      <DependentUpon>BookingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CatalogView.xaml.cs">
+      <DependentUpon>CatalogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CreateUserView.xaml.cs">
+      <DependentUpon>CreateUserView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginView.xaml.cs">
+      <DependentUpon>LoginView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\SearchView.xaml.cs">
+      <DependentUpon>SearchView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserView.xaml.cs">
+      <DependentUpon>UserView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\Images\BackgroundImages\Cottage_Winter.jpg" />
+    <Content Include="Assets\Images\BackgroundImages\parryPeak.jpg" />
+    <Content Include="Assets\Images\BackgroundImages\Winter_Park.jpg" />
+    <Content Include="Assets\Images\countryside.jpg" />
+    <Content Include="Assets\Images\fvacanceslogo.png" />
+    <Content Include="Assets\Images\islands.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet1.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet10.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet11.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet12.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet13.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet2.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet3.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet4.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet5.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet6.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet7.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet8.jpg" />
+    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet9.jpg" />
+    <Content Include="Assets\Images\sea.jpg" />
+    <Content Include="Assets\Images\mountains.jpg" />
+    <Content Include="Assets\SiteContent\Chalets.txt" />
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="AppShell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AboutView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\AccommodationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BookingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CatalogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CreateUserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LoginView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\SearchView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\UserView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Images\Locations\Andorre\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Guadeloupe\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Italy\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Jura\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Martinique\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\MassifCentral\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Mauritius\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Pyrenees\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Reunion\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\SeaFreely\Cottage1\" />
+    <Folder Include="Assets\Images\Locations\Vosges\Cottage1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,4 @@
+skiPassion.jpg: https://www.flickr.com/photos/barneymoss/16592320210
+seaInWinter.jpg: https://www.flickr.com/photos/crondeau/6728854555
+islands.jpg: https://upload.wikimedia.org/wikipedia/commons/5/5d/St_Martins_-_aerial_photo.jpg
+foreignCountries.jpg: https://www.pexels.com/photo/white-boat-near-brown-concrete-building-227417/

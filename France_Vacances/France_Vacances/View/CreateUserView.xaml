@@ -1,0 +1,88 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:France_Vacances.View"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ViewModel="using:France_Vacances.ViewModel"
+    x:Class="France_Vacances.View.CreateUserView"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.DataContext>
+            <ViewModel:CreateUserViewModel/>
+        </Grid.DataContext>
+        <!-- Background Image Grid -->
+        <Grid Style="{StaticResource GridBackground}">
+            <ScrollViewer>
+                <Grid>
+
+                    <Grid Style="{StaticResource CreateUserGrid}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TextBlock Style="{StaticResource CreateUserHeadlineStyle}" Text="Create User"/>
+                        <Grid Grid.Row="1">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="300"/>
+                            </Grid.ColumnDefinitions>
+                            
+                            <!--  Input TextBlocks and Boxes -->
+                            <StackPanel Style="{StaticResource CreateUserStackpanelLeft}">
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Username"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.UserName, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Password"/>
+                                <PasswordBox Style="{StaticResource CreateUserPasswordBoxStyle}" Password="{Binding NewUser.Password, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Repeat Password"/>
+                                <PasswordBox Style="{StaticResource CreateUserPasswordBoxStyle}" Password="{Binding RepeatedPassword, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="First name"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.FirstName, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Last name"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.LastName, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Birth date"/>
+                                <CalendarDatePicker Date="{Binding NewUser.BirthDate, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Address"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.Address, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="City"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.City, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Country"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.Country, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Postal code"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.PostalCode, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="E-mail address"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.EmailAddress, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Repeat e-mail address"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding RepeatedEmail, Mode=TwoWay}"/>
+                                <TextBlock Style="{StaticResource CreateUserFontStyle}" Text="Phone number"/>
+                                <TextBox Style="{StaticResource CreateUserTextBoxStyle}" Text="{Binding NewUser.PhoneNumber, Mode=TwoWay}"/>
+                            </StackPanel>
+                            
+                            <!-- Error TextBlocks -->
+                            <StackPanel Grid.Column="1" Style="{StaticResource CreateUserStackpanelRight}">
+                                <TextBlock x:Name="UserNameError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayUserNameErrorText , Mode=TwoWay}" Visibility="{Binding DisplayUserNameVisibility}"/>
+                                <TextBlock x:Name="PasswordError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayUserNameErrorText , Mode=TwoWay}" Visibility="{Binding DisplayUserNameVisibility}"/>
+                                <TextBlock x:Name="PasswordRepeatError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayRePasswordErrorText , Mode=TwoWay}" Visibility="{Binding DisplayRePasswordVisibility}"/>
+                                <TextBlock x:Name="FirstNameError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayFirstNameErrorText , Mode=TwoWay}" Visibility="{Binding DisplayFirstNameVisibility}"/>
+                                <TextBlock x:Name="LastNameError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayLastNameErrorText , Mode=TwoWay}" Visibility="{Binding DisplayLastNameVisibility}"/>
+                                <TextBlock x:Name="DOB" Style="{StaticResource ErrorTextFontStyle}" Text="" Visibility="{Binding DisplayFirstNameVisibility}"/>
+                                <TextBlock x:Name="AddressError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayAddressErrorText , Mode=TwoWay}" Visibility="{Binding DisplayAdressVisibility}"/>
+                                <TextBlock x:Name="CityError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayCityErrorText , Mode=TwoWay}" Visibility="{Binding DisplayCountryVisibility}"/>
+                                <TextBlock x:Name="CountryError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayCountryErrorText , Mode=TwoWay}" Visibility="{Binding DisplayCountryVisibility}"/>
+                                <TextBlock x:Name="PostcodeError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayPostCodeErrorText , Mode=TwoWay}" Visibility="{Binding DisplayPostCodeVisibility}"/>
+                                <TextBlock x:Name="EmailError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayEmailErrorText , Mode=TwoWay}" Visibility="{Binding DisplayEmailVisibility}"/>
+                                <TextBlock x:Name="ReEmailError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayReEmailErrorText , Mode=TwoWay}" Visibility="{Binding DisplayReEmailVisibility}"/>
+                                <TextBlock x:Name="PhoneNrError" Style="{StaticResource ErrorTextFontStyle}" Text="{Binding DisplayPhoneErrorText , Mode=TwoWay}" Visibility="{Binding DisplayPhoneNrVisibility}"/>
+                            </StackPanel>
+                            
+                            <!-- Create User Button -->
+                            <Button x:Name="Create" Grid.Column="1" Style="{StaticResource CreateButtonStyle}" Content="Create" Command="{Binding DoCreateNewUser}" Click="CreateNewUser_OnClick"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Page>       

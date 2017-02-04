@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="6311c047-5d16-40cf-b6e3-4382283ddde6" name="SearchViewCD" linkedPackageId="e86e5526-6f34-405c-8bfe-bf6a2d86dbf0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7490ce89-cbf1-4d9d-a8df-98f090f843e3" name="AppShell" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c756630f-0fdf-49ae-acdd-87f27e20df8f" />
+        <targetEnds>
+          <association Id="937790eb-fd99-472d-bc0e-73206763b7b5" isDerived="false" sourceEndRoleName="AppShell" targetEndRoleName="SearchView" isLeaf="false" isAbstract="false">
+            <classMoniker Id="87ff1fed-cf05-4ffd-915d-3ff6bf2b4d4b" LastKnownName="SearchView" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2d528910-b6b3-414e-8dc5-09a045056054" name="AppShell" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0d52d3ea-382c-45c1-b13e-e3a332e9ad9e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7ac75f21-41d4-4891-9972-72b0039ed3df" name="SearchView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b521db44-659c-4001-82a1-9ee77dedaa23" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="a31d458c-c04c-4399-95db-c89186e9b32d" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="87ff1fed-cf05-4ffd-915d-3ff6bf2b4d4b" name="SearchView" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="28603b21-dbd6-4a8c-90f4-659e4b301089" />
+        <targetEnds>
+          <association Id="2e63f0b6-d7b2-41d9-8fe3-2607457662e5" isDerived="false" sourceEndRoleName="SearchView" targetEndRoleName="SearchViewModel" isLeaf="false" isAbstract="false">
+            <classMoniker Id="ae41edb8-5a42-4a0d-967a-a091119315d5" LastKnownName="SearchViewModel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a5c9f98-9646-4ac9-89b9-75b8dc7fda34" name="SearchView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8a0e28e9-b188-4f2c-b8e8-8beca4767fb8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f5437012-83ce-4c5c-a9df-d09496627c3b" name="SearchViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b694d8dd-1ceb-497e-848a-c7aa7be4dc71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="96fded4e-1f48-4f1a-b228-751e2fa8cb4c" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="ae41edb8-5a42-4a0d-967a-a091119315d5" name="SearchViewModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f4026480-ae0e-4f3b-a033-800b176f5aa0" />
+        <targetEnds>
+          <association Id="5135c04e-669d-427c-94c9-d2655bf29106" isDerived="false" sourceEndRoleName="SearchViewModel" targetEndRoleName="AccommodationModel" isLeaf="false" isAbstract="false">
+            <classMoniker Id="14bc009f-0599-4d6a-bc07-84808dfcd8db" LastKnownName="AccommodationModel" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a70f705e-6e2e-4850-ab6e-197fac4388dd" name="SearchViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="31e2eee0-0734-4ae1-89d3-bcf79ad57fe5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b6432508-38e8-479b-a55a-1ff175b0e4e0" name="AccommodationModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <lowerValueInternal>
+                    <literalString Id="0f927f35-c760-4d64-9ea4-0c866127e0f0" name="Lower" value="1*">
+                      <elementDefinition Id="6127a6f1-95de-4ea9-9aac-f0059724f63f" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="c80c9116-64f8-4de9-92e3-1ed78259e1cc" name="Upper" value="1*">
+                      <elementDefinition Id="5f8b4eba-1c30-4450-b4ad-4678fce53f5d" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="e48b0ae6-187a-49e7-a889-c3c6b752c525" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="02613396-881f-4986-82c9-7faad71e3fff" />
+          </association>
+          <association Id="2b7d760d-7ab5-4d53-a875-bbfcb9793c87" isDerived="false" sourceEndRoleName="SearchViewModel" targetEndRoleName="AccommodationSingleton" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4e5f88ef-768f-41ad-b410-b3356de6141c" LastKnownName="AccommodationSingleton" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8149fd98-f762-491b-9c15-ed97c6fd9d32" name="SearchViewModel" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="37efcb30-a356-4861-bd0d-92516cf12d71" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="60da7fff-aa3f-4085-83ec-c48dea2e53e7" name="AccommodationSingleton" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="fee72388-1657-4918-bc90-24af73f00b68" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="fec81654-513b-438d-a66f-5e3cd81f815a" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="14bc009f-0599-4d6a-bc07-84808dfcd8db" name="AccommodationModel" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="924bf5fd-c245-4ca5-95e3-0df7583f0873" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4e5f88ef-768f-41ad-b410-b3356de6141c" name="AccommodationSingleton" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f28a2052-b38b-4412-a989-1d1a8d75b9bc" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="e86e5526-6f34-405c-8bfe-bf6a2d86dbf0" name="FV_ClassDiagram">
+    <elementDefinition Id="fe84fded-a9b2-4e62-8fe9-de3c45c5b060" />
+    <profileInstances>
+      <packageHasProfileInstances Id="7a0fc582-aa03-4aef-9fc6-b1ecb5c9adfe">
+        <profileInstance Id="ba86e59d-e7e7-43e9-bbb2-b7a99820d8f2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="e596cbf2-df6a-4f73-9d90-62ea988a7341">
+        <profileInstance Id="fa88e1f2-4b6f-438f-8023-ddfe4232c415" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
