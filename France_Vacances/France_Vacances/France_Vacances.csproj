@@ -94,7 +94,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Assets\Fonts\BreeSerif.ttf" />
-    <None Include="Assets\SiteContent\test.json" />
     <None Include="ClassDiagram1.cd" />
     <None Include="France_Vacances_TemporaryKey.pfx" />
     <None Include="project.json" />
@@ -170,23 +169,8 @@
     <Content Include="Assets\Images\countryside.jpg" />
     <Content Include="Assets\Images\fvacanceslogo.png" />
     <Content Include="Assets\Images\islands.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet1.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet10.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet11.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet12.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet13.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet2.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet3.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet4.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet5.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet6.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet7.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet8.jpg" />
-    <Content Include="Assets\Images\Locations\Alps\Cottage1\old-ski-area-chalet9.jpg" />
     <Content Include="Assets\Images\sea.jpg" />
     <Content Include="Assets\Images\mountains.jpg" />
-    <Content Include="Assets\SiteContent\Chalets.txt" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -246,19 +230,7 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Images\Locations\Andorre\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Guadeloupe\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Italy\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Jura\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Martinique\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\MassifCentral\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Mauritius\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Pyrenees\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Reunion\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\SeaFreely\Cottage1\" />
-    <Folder Include="Assets\Images\Locations\Vosges\Cottage1\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
